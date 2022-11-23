@@ -11,8 +11,18 @@ import SwiftUI
 struct FublesApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
-                .preferredColorScheme(.dark)
+            TabView {
+                ContentView()
+                    .tabItem {
+                        Label("Matches", systemImage: "list.dash")
+                    }
+                ContentView()
+                    .tabItem {
+                        Label("Map", systemImage: "list.dash")
+                    }
+                
+            }
+            .preferredColorScheme(.dark)
         }
     }
 }

@@ -9,36 +9,35 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var searchText = ""
+    @State private var isOpen: Bool = false
     
     var body: some View {
         
         NavigationView {
-            VStack {
-                List {
-                    ForEach((1...3).reversed(), id: \.self) {_ in
-                        NavigationLink(destination: Text("Match")) {
-                            ItemList()
-                                .frame(height: 100)
-                        }
-                   }
-                    .padding(5)
+            List {
+                ForEach(matches) { match in
+                    NavigationLink(destination: MatchDetailsView()) {
+                        ItemList(match: match)
+                            .frame(height: 100)
+                    }
                 }
+                .padding(5)
             }
-            .searchable(text: $searchText)
             .navigationTitle("Fubles")
+            .searchable(text: $searchText)
             .toolbar {
                 ToolbarItemGroup(placement: .navigationBarTrailing) {
-                    
-
                     Button(action: {
-                        print("New Game")
+                        isOpen.toggle()
                     }, label: {
                         Image(systemName: "plus")
                     })
                 }
             }
+            .sheet(isPresented: $isOpen) {
+                Text("New Match")
+            }
         }
-        
     }
 }
 
@@ -47,3 +46,65 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+
+
+//
+//
+//import SwiftUI
+//
+//struct ContentView: View {
+//    @State private var searchText = ""
+//    @State private var isOpen: Bool = false
+//
+//    var body: some View {
+//
+//        NavigationView {
+//
+//            VStack {
+//                    ScrollView(showsIndicators: false) {
+////                    Section(header: Text("")
+////                        .frame(maxWidth: .infinity, alignment: .leading)
+////                        .padding(.horizontal, 16)) {
+//                        List {
+//                            ForEach(matches) { match in
+//                                NavigationLink(destination: MatchDetailsView()) {
+//                                    ItemList(match: match)
+//                                        .frame(height: 100)
+//                                }
+//                            }
+//
+//                            .padding(5)
+//                        }
+//                        .frame(height: 440)
+//                    //}
+//
+////                    Section(header: Text("Map").frame(maxWidth: .infinity, alignment: .leading)
+////                        .padding(.horizontal, 16)) {
+////                        MapView()
+////                    }
+//                }
+//            }
+//            .navigationTitle("Fubles")
+//            .searchable(text: $searchText)
+//            .toolbar {
+//                ToolbarItemGroup(placement: .navigationBarTrailing) {
+//                    Button(action: {
+//                        isOpen.toggle()
+//                    }, label: {
+//                        Image(systemName: "plus")
+//                    })
+//                }
+//            }
+//            .sheet(isPresented: $isOpen) {
+//                Text("New Match")
+//                    .foregroundColor(.yellow)
+//            }
+//        }
+//    }
+//}
+//
+//struct ContentView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ContentView()
+//    }
+//}

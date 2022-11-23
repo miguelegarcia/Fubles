@@ -8,40 +8,43 @@
 import SwiftUI
 
 struct ItemList: View {
+    
+    @State var match: MatchModel
+    
     var body: some View {
        
         HStack{
             VStack(alignment: .leading) {
-                Text("6 a side Football")
+                Text("\(match.players) a side Football")
                     .fontWeight(.heavy)
-                    .font(.custom("SF Pro Text", size: 18))
+                    .font(.custom("SF Pro Text", size: 22))
                     .padding(.bottom, 0.5)
                     
-                Text("Tuesday, 15, November")
+                Text(match.date)
                     .padding(.bottom, 0.5)
-                Text("6.1 km - Max Sporting Club")
+                Text(match.location)
 
             }
             
             Spacer()
             
             VStack(alignment: .trailing) {
-                Text("£6.00")
+                Text("£\(match.formatPrice)")
                     .padding(.bottom, 0.5)
-                Text("20:00")
+                Text(match.time)
                     .padding(.bottom, 0.5)
-                Text("2")
+                Text("\(match.curPlayers)")
                     .frame(width: 20, height: 20)
                     .padding(6)
-                    .background(.red)
+                    .background(match.missPlayers() == 0 ? .red : match.missPlayers() == 1 ? .orange : .green)
                     .cornerRadius(5)
             }
         }
     }
 }
 
-struct ItemList_Previews: PreviewProvider {
-    static var previews: some View {
-        ItemList()
-    }
-}
+//struct ItemList_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ItemList()
+//    }
+//}
