@@ -19,11 +19,8 @@ struct MapView: View {
         
         ZStack {
             Map(coordinateRegion: $region)
-                .frame(height: 400)
-                .cornerRadius(15)
-                .padding(16)
-                
-                
+                .cornerRadius(10)
+                .padding(15)
                 
                 //                MapMarker(coordinate: CLLocationCoordinate2D(latitude: locat.latitude, longitude: locat.longitude), tint: .blue)
 

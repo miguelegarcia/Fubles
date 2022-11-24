@@ -14,11 +14,11 @@ struct FublesApp: App {
             TabView {
                 ContentView()
                     .tabItem {
-                        Label("Matches", systemImage: "list.dash")
+                        Label("Matches", systemImage: "sportscourt.fill")
                     }
-                ContentView()
+                MapView()
                     .tabItem {
-                        Label("Map", systemImage: "list.dash")
+                        Label("Map", systemImage: "map.fill")
                     }
                 
             }

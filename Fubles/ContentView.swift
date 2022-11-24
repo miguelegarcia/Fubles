@@ -16,7 +16,7 @@ struct ContentView: View {
         NavigationView {
             List {
                 ForEach(matches) { match in
-                    NavigationLink(destination: MatchDetailsView()) {
+                    NavigationLink(destination: MatchDetailsView(match: match)) {
                         ItemList(match: match)
                             .frame(height: 100)
                     }
@@ -35,7 +35,7 @@ struct ContentView: View {
                 }
             }
             .sheet(isPresented: $isOpen) {
-                Text("New Match")
+                ModalView()
             }
         }
     }

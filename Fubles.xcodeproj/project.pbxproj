@@ -15,6 +15,7 @@
 		B9F237312926640C00F883F2 /* MatchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F237302926640C00F883F2 /* MatchModel.swift */; };
 		B9F2373329266DF300F883F2 /* MatchDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F2373229266DF300F883F2 /* MatchDetailsView.swift */; };
 		B9F23735292B94C400F883F2 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F23734292B94C400F883F2 /* MapView.swift */; };
+		B9F23737292E397C00F883F2 /* ModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F23736292E397C00F883F2 /* ModalView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		B9F237302926640C00F883F2 /* MatchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchModel.swift; sourceTree = "<group>"; };
 		B9F2373229266DF300F883F2 /* MatchDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDetailsView.swift; sourceTree = "<group>"; };
 		B9F23734292B94C400F883F2 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		B9F23736292E397C00F883F2 /* ModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,9 +62,10 @@
 			isa = PBXGroup;
 			children = (
 				B9F237202924E9D300F883F2 /* FublesApp.swift */,
-				B9F2373229266DF300F883F2 /* MatchDetailsView.swift */,
 				B9F237222924E9D300F883F2 /* ContentView.swift */,
+				B9F23736292E397C00F883F2 /* ModalView.swift */,
 				B9F2372E2924EF8000F883F2 /* ItemList.swift */,
+				B9F2373229266DF300F883F2 /* MatchDetailsView.swift */,
 				B9F237302926640C00F883F2 /* MatchModel.swift */,
 				B9F23734292B94C400F883F2 /* MapView.swift */,
 				B9F237242924E9D400F883F2 /* Assets.xcassets */,
@@ -153,6 +156,7 @@
 				B9F23735292B94C400F883F2 /* MapView.swift in Sources */,
 				B9F237312926640C00F883F2 /* MatchModel.swift in Sources */,
 				B9F2372F2924EF8000F883F2 /* ItemList.swift in Sources */,
+				B9F23737292E397C00F883F2 /* ModalView.swift in Sources */,
 				B9F2373329266DF300F883F2 /* MatchDetailsView.swift in Sources */,
 				B9F237212924E9D300F883F2 /* FublesApp.swift in Sources */,
 			);
